@@ -6,28 +6,36 @@
 <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
 <meta name="viewport"  content="initial-scale=1, width=device-width">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
 <link rel="shortcut icon" href="">
   
 </head>
 <body>
 
+<div class="container-fluid">
   <header>
-    <div id="container">
-  
-    </div>  
+      <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Logo</a>
+            </div>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+                <li><a href="#login"><i class="fa fa-shield"></i> Inloggen</a></li>
+                <li><a href="#contact"><i class="fa fa-comment"></i> Contact</a></li>
+            </ul>
+        </div>
+      </nav>
   </header>
-   
-  <section id="introductie">  
-    <div id="container">
 
-      <form action="" method="post" name="loginform">
-          <input type="text" placeholder="Username" id="username" name="username" required/>
-          <input type="password" placeholder="Password" id="password" name="password" required/>
-        <button class="" type="submit">Login</button>
-      </form>
 
-    </div>  
-  </section> 
+  <div id="main">
+
+    <p>Hier worden de templates geladen</p>
+
+  </div>
+    
 
   <footer> 
     <div id="container">
@@ -35,9 +43,10 @@
 
     </div>  
   </footer>
+</div>  
 
-
+  <script src="angular.js"></script>
+  <script src="angular-route.js"></script>
   <script src="js/jquery-1.11.0.js"></script>
-  <script src="js/node.js"></script>
 </body>
 </html>

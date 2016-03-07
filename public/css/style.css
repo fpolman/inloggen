@@ -48,64 +48,6 @@ table {
 
 /* tot hier */
 
-body {
-  padding: 0px;
-  margin:0px;
-  font-family: Cambria, Georgia, serif;
-  line-height: 1.2em;
-  font-size:100%;
-  background:#fff;
-  width:340px;
-  margin: 0px auto;
-  color:#333;
-}
-
-h1 {
-    font-size: 20px;
-    font-weight: bold;
-    padding: 20px;
-}
-
-h2 {
-    font-size: 18px;
-    font-weight: bold;
-    padding-top:20px;
-    padding-bottom:20px;
-}
-
-#container {
-  clear:both;
-  margin: 0px auto;
-  width:320px;
-}
-
-header, nav, footer, h1, h2, h3 {
-  font-family: 'Lora', sans-serif;
-}
-
-header {
-  color: #fff;
-  background:#004c2b;
-  width: 100%;
-  margin: 0;
-  padding: 0; 
-  height:70px;
-}
-
-header h1{
-	padding: 30px 0 10px 0px;
-	margin: 0;
-}
-
-header h3 {
-  font-size:15px;
-}
-
-/* main content */
-#introductie {
-  margin-top:10px;
-  margin-bottom:50px;
-}
 
 /*form style */
 form {
@@ -183,7 +125,6 @@ button {
 button:hover {
   background:#DB3503;
 }
-
 
 /* footer */
 footer { 

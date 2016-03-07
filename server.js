@@ -1,5 +1,6 @@
+
 var express    = require("express");
-var app = express();
+//var app = express();
 
 
 var mysql      = require('mysql');
@@ -21,8 +22,11 @@ connection.query('SELECT * from gebruikers', function(err, rows, fields) {
 
 connection.end();
 
+
+/*
 app.listen(3000, function () {
   console.log('inlog functie on port 3000');
 });
 
 app.use(express.static('public'));
+*/
