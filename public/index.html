@@ -9,8 +9,9 @@
 <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
 <link rel="shortcut icon" href="">
   
+<html ng-app="travelApp">
 </head>
-<body>
+<body ng-controller="mainController">
 
 <div class="container-fluid">
   <header>
@@ -34,6 +35,8 @@
 
     <p>Hier worden de templates geladen</p>
 
+    {{ message }}
+
   </div>
     
 
@@ -46,6 +49,7 @@
 </div>  
 
   <script src="angular.js"></script>
+  <script src="script.js"></script>
   <script src="angular-route.js"></script>
   <script src="js/jquery-1.11.0.js"></script>
 </body>
