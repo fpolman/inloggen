@@ -2,7 +2,7 @@
     var travelApp = angular.module('travelApp', ['ngRoute']);
 
 	// De routes
-    scotchApp.config(function($routeProvider) {
+    travelApp.config(function($routeProvider) {
         $routeProvider
 
             // route naar home
@@ -14,7 +14,7 @@
             // route naar inloggen
             .when('/inlogform', {
                 templateUrl : 'pages/inlogform.html',
-                controller  : 'aboutController'
+                controller  : 'inlogformController'
             })
 
             // route naar contact
@@ -27,7 +27,7 @@
     // controller aanmaken
     travelApp.controller('mainController', function($scope) {
      	// bericht in de view
-        $scope.message = 'test bericht';
+        $scope.message = 'home pagina';
     });
 
     travelApp.controller('inlogformController', function($scope) {
