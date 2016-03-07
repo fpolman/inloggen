@@ -1,0 +1,202 @@
+
+/* reset css */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+    margin-top:10px;
+}
+
+/* tot hier */
+
+body {
+  padding: 0px;
+  margin:0px;
+  font-family: Cambria, Georgia, serif;
+  line-height: 1.2em;
+  font-size:100%;
+  background:#fff;
+  width:340px;
+  margin: 0px auto;
+  color:#333;
+}
+
+h1 {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: bold;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
+#container {
+  clear:both;
+  margin: 0px auto;
+  width:320px;
+}
+
+header, nav, footer, h1, h2, h3 {
+  font-family: 'Lora', sans-serif;
+}
+
+header {
+  color: #fff;
+  background:#004c2b;
+  width: 100%;
+  margin: 0;
+  padding: 0; 
+  height:70px;
+}
+
+header h1{
+	padding: 30px 0 10px 0px;
+	margin: 0;
+}
+
+header h3 {
+  font-size:15px;
+}
+
+/* main content */
+#introductie {
+  margin-top:10px;
+  margin-bottom:50px;
+}
+
+/*form style */
+form {
+  padding-top:25px;
+}
+
+.no-style {
+  border:none;
+  padding:0;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="date"],
+input[type="number"],
+textarea,
+select
+{
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 4%;
+    border: 1px solid #ccc;
+    padding: 3%;
+    color: #555;
+    font: 95% Arial, Helvetica, sans-serif;
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+ select:focus
+{
+    box-shadow: 0 0 5px #43D1AF;
+    padding: 3%;
+    border: 1px solid #43D1AF;
+}
+
+input[type="submit"],
+input[type="button"]{
+    width: 100%;
+    padding: 3%;
+    background: #EB8213;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    border-bottom-style: none;   
+    color: #fff;
+    transition: all 0.5s ease 0s;
+}
+input[type="submit"]:hover,
+input[type="button"]:hover{
+    background: #C97010;
+}
+
+/* styling knoppen */
+button {
+  padding: 10px 15px;
+  background: #FF3E04;
+  color: #FFF;
+  border-style:none;
+  transition: all 0.5s ease 0s;
+}
+
+button:hover {
+  background:#DB3503;
+}
+
+
+/* footer */
+footer { 
+	color: #fff;
+	background:#222222; 
+	padding:0;
+	margin:0;
+	clear: both;
+  margin-top:25px;
+}
+
+footer h3 {
+  font-size:13px;
+  font-weight: bold;
+  padding:15px;
+}
