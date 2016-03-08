@@ -49,83 +49,6 @@ table {
 /* tot hier */
 
 
-/*form style */
-form {
-  padding-top:25px;
-}
-
-.no-style {
-  border:none;
-  padding:0;
-}
-
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="date"],
-input[type="number"],
-textarea,
-select
-{
-    -webkit-transition: all 0.30s ease-in-out;
-    -moz-transition: all 0.30s ease-in-out;
-    -ms-transition: all 0.30s ease-in-out;
-    -o-transition: all 0.30s ease-in-out;
-    outline: none;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    width: 100%;
-    background: #fff;
-    margin-bottom: 4%;
-    border: 1px solid #ccc;
-    padding: 3%;
-    color: #555;
-    font: 95% Arial, Helvetica, sans-serif;
-}
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="email"]:focus,
-input[type="date"]:focus,
-input[type="number"]:focus,
-textarea:focus,
- select:focus
-{
-    box-shadow: 0 0 5px #43D1AF;
-    padding: 3%;
-    border: 1px solid #43D1AF;
-}
-
-input[type="submit"],
-input[type="button"]{
-    width: 100%;
-    padding: 3%;
-    background: #EB8213;
-    border-top-style: none;
-    border-right-style: none;
-    border-left-style: none;
-    border-bottom-style: none;   
-    color: #fff;
-    transition: all 0.5s ease 0s;
-}
-input[type="submit"]:hover,
-input[type="button"]:hover{
-    background: #C97010;
-}
-
-/* styling knoppen */
-button {
-  padding: 10px 15px;
-  background: #FF3E04;
-  color: #FFF;
-  border-style:none;
-  transition: all 0.5s ease 0s;
-}
-
-button:hover {
-  background:#DB3503;
-}
-
 /* footer */
 footer { 
 	color: #fff;
@@ -158,9 +81,9 @@ footer h3 {
 }
 
 #slideshow IMG.active {
-    z-index:10;
+    z-index:1;
 }
 
 #slideshow IMG.last-active {
-    z-index:9;
+    z-index:0;
 }

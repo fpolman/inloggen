@@ -1,5 +1,5 @@
 
-	// module aanmaken met de naam travelApp
+    // module aanmaken met de naam travelApp
     var travelApp = angular.module('travelApp', ['ngRoute']);
 
 	// De routes
@@ -8,20 +8,20 @@
 
             // route naar home
             .when('/', {
-                templateUrl : 'pages/home.html',
-                controller  : 'mainController'
+                templateUrl : 'pages/home.html'
             })
 
             // route naar inloggen
             .when('/inlogform', {
-                templateUrl : 'pages/inlogform.html',
-                controller  : 'inlogformController'
+                templateUrl : 'pages/inlogform.html'
             })
 
             // route naar contact
             .when('/contact', {
-                templateUrl : 'pages/contact.html',
-                controller  : 'contactController'
+                templateUrl : 'pages/contact.html'
+            })
+            .otherwise({
+                redirectTo: '/'
             });
     });
 
@@ -32,7 +32,7 @@
     });
 
     travelApp.controller('inlogformController', function($scope) {
-        $scope.message = 'inlogpagina';
+        $scope.message = 'Inloggen';
     });
 
     travelApp.controller('contactController', function($scope) {
