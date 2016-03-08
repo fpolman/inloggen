@@ -8,48 +8,54 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
 <link rel="shortcut icon" href="">
+
+<script src="angular.js"></script>
+<script src="angular-route.js"></script>
+<script src="angular-resource.js"></script>
+<script src="script.js"></script>
+<script src="jquery-2.1.4.js"></script>
+<script src="slideshow.js"></script>
   
 <html ng-app="travelApp">
 </head>
 <body ng-controller="mainController">
 
-<div class="container-fluid">
-  <header>
-      <nav class="navbar navbar-default">
-        <div class="container">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="/">Logo</a>
-            </div>
-
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
-                <li><a href="#inlogform"><i class="fa fa-shield"></i> Inloggen</a></li>
-                <li><a href="#contact"><i class="fa fa-comment"></i> Contact</a></li>
-            </ul>
+  <div class="container-fluid">
+    <header>
+        <div id="slideshow">
+            <p>slideshow</p>
+            <img src="images/img1.jpg" width="100%" alt="" class="active" />
+            <img src="images/img2.jpg" width="100%" alt="" />
         </div>
-      </nav>
-  </header>
 
+        <nav class="navbar navbar-default">
+          <div class="container">
+              <div class="navbar-header">
+                  <a class="navbar-brand" href="#">Logo</a>
+              </div>
+              <ul class="nav navbar-nav navbar-right">
+                  <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+                  <li><a href="#inlogform"><i class="fa fa-shield"></i> Inloggen</a></li>
+                  <li><a href="#contact"><i class="fa fa-comment"></i> Contact</a></li>
+              </ul>
+          </div>
+        </nav>
+    </header>
 
-  <div id="main">
+    <div id="main">
 
-    <!-- content injecteren -->
-    <div ng-view></div>
+      <!-- content injecteren -->
+      <div ng-view></div>
 
-  </div>
-    
+    </div>
+      
 
-  <footer> 
-    <div id="container">
-      <h3>Frank Polman</h3>
+    <footer> 
+      <div id="container">
+        <h3>Frank Polman</h3>
 
-    </div>  
-  </footer>
-</div>  
-
-  <script src="angular.js"></script>
-  <script src="script.js"></script>
-  <script src="angular-route.js"></script>
-  <script src="js/jquery-1.11.0.js"></script>
+      </div>  
+    </footer>
+  </div>  
 </body>
 </html>
