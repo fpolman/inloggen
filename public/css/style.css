@@ -141,3 +141,26 @@ footer h3 {
   font-weight: bold;
   padding:15px;
 }
+
+
+/* slideshow */
+
+#slideshow {
+    position:relative;
+    height:400px;
+}
+
+#slideshow IMG {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:8;
+}
+
+#slideshow IMG.active {
+    z-index:10;
+}
+
+#slideshow IMG.last-active {
+    z-index:9;
+}

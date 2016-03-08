@@ -1,4 +1,5 @@
-// module aanmaken met de naam travelApp
+
+	// module aanmaken met de naam travelApp
     var travelApp = angular.module('travelApp', ['ngRoute']);
 
 	// De routes
