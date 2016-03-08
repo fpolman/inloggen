@@ -10,6 +10,4 @@ angular.module('mainController', [])
       };
 
 
-      $scope.message="hallo";
-
 }]);

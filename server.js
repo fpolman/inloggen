@@ -27,6 +27,9 @@ connection.end();
 
 app.listen(3000, function () {
   console.log('inlog functie on port 3000');
+
+  console.log('testke');
+
 });
 
 app.use(express.static('public'));
