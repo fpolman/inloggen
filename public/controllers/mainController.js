@@ -1,8 +1,15 @@
-angular.module('mainController', []) 
-    .controller('mainController', ['$scope', '$http', function ($scope, $http) {
+angular.module('mainController', [])
+    .controller('mainController', ['$scope', function ($scope) {
 
-        $scope.registreren = function() {
+      $scope.registreren = function()  {
+        
+        console.log('hello');
 
-            console.log('registreren');
+
+
+      };
+
+
+      $scope.message="hallo";
 
 }]);

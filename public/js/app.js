@@ -1,6 +1,6 @@
 
     // module aanmaken met de naam travelApp
-    var travelApp = angular.module('travelApp', ['ngRoute']);
+    var travelApp = angular.module('travelApp', ['mainController', 'ngRoute']);
 
 	// De routes
     travelApp.config(function($routeProvider) {
@@ -23,18 +23,4 @@
             .otherwise({
                 redirectTo: '/'
             });
-    });
-
-    // controller aanmaken
-    travelApp.controller('mainController', function($scope) {
-     	// bericht in de view
-        $scope.message = 'home pagina';
-    });
-
-    travelApp.controller('inlogformController', function($scope) {
-        $scope.message = 'Inloggen';
-    });
-
-    travelApp.controller('contactController', function($scope) {
-        $scope.message = 'Contact pagina';
     });
