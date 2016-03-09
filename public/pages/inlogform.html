@@ -1,20 +1,18 @@
 
 	<div class="jumbotron text-center">
-        <h1>Login pagina</h1>
+        <h1>Registreren</h1>
 
         <p>{{ message }}</p>
 
         <form>
 		  <div class="form-group">
-		    <label for="email">Email adres</label>
-		    <input type="email" class="form-control" id="email" placeholder="Email">
+		    <label for="email">Username</label>
+		    <input type="text" name="username" class="form-control" id="username" placeholder="Username" ng-model="username">
 		  </div>
 		  <div class="form-group">
 		    <label for="password">Password</label>
-		    <input type="password" class="form-control" id="password" placeholder="Password">
+		    <input type="password" name="password" class="form-control" id="password" placeholder="Password" ng-model="password">
 		  </div>
-		  <button type="submit" class="btn btn-default" ng-click="registreren()">Registreren</button>
+		  <button type="submit" class="btn btn-default" ng-click="register()">Registreren</button>
 		</form>
-
-
     </div>
