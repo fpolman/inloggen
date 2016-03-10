@@ -48,8 +48,6 @@ app.post('/user/create', function(req, res){
 
   var gebruiker = {id: 0, naam: req.body.username};
 
-  console.log('request received:', req.body);
-
   var query = connection.query('insert into gebruikers set ?', gebruiker, function (err, result) {
       if (err) {
        console.error(err);
@@ -70,8 +68,6 @@ app.post('/add/land', function(req, res){
 
   var landen = {id: 0, landnaam: req.body.land};
 
-  console.log('request received:', req.body);
-
   var query = connection.query('insert into landen set ?', landen, function (err, result) {
       if (err) {
        console.error(err);
@@ -79,10 +75,27 @@ app.post('/add/land', function(req, res){
      } else {
        return res.send('Ok');
      }
-     
+
     });
     connection.end();
 }); 
+
+
+//laden van de landenlijst
+app.get('/landen', function(req, res) {
+  var connection = getConnection();
+  connection.connect();
+  connection.query('SELECT * from landen', function(err, rows, fields) {
+    if (!err) {
+      //console.log(rows);
+      res.send(JSON.stringify(rows));
+    }
+    else {
+      console.log('Error while performing Query.');
+    }
+  });
+  connection.end();
+});
 
 
 
