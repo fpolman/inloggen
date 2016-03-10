@@ -58,8 +58,6 @@ app.post('/user/create', function(req, res){
        return res.send('Ok');
      }
 
-      //console.log("new user");
-      //res.status(200).end();
     });
     connection.end();
 }); 
@@ -81,9 +79,7 @@ app.post('/add/land', function(req, res){
      } else {
        return res.send('Ok');
      }
-
-      //console.log("new user");
-      //res.status(200).end();
+     
     });
     connection.end();
 }); 
