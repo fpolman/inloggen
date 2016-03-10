@@ -40,7 +40,7 @@ app.listen(3000, function () {
 app.use(express.static('public'));
 
 
-// post data naar database
+// post user naar database
 app.post('/user/create', function(req, res){
 
   var connection = getConnection();
@@ -63,5 +63,31 @@ app.post('/user/create', function(req, res){
     });
     connection.end();
 }); 
+
+// post land naar database
+app.post('/add/land', function(req, res){
+
+  var connection = getConnection();
+  connection.connect();
+
+  var landen = {id: 0, landnaam: req.body.land};
+
+  console.log('request received:', req.body);
+
+  var query = connection.query('insert into landen set ?', landen, function (err, result) {
+      if (err) {
+       console.error(err);
+       return res.send(err);
+     } else {
+       return res.send('Ok');
+     }
+
+      //console.log("new user");
+      //res.status(200).end();
+    });
+    connection.end();
+}); 
+
+
 
 

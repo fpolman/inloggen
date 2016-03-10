@@ -17,10 +17,17 @@
                 controller: 'mainController'
             })
 
+            // route naar landen
+            .when('/landen', {
+                templateUrl : 'pages/landen.html',
+                controller: 'mainController'
+            })
+
             // route naar contact
             .when('/contact', {
                 templateUrl : 'pages/contact.html'
             })
+
             .otherwise({
                 redirectTo: '/'
             });
