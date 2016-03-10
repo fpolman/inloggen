@@ -1,21 +1,18 @@
 angular.module('mainController', [])
-    .controller('mainController', ['$scope', '$http', function ($scope, $http) {
+    .controller('mainController', ['$scope', '$http', function($scope, $http) {
 
 
       // register functie, start wanneer register button geklikt is
       $scope.register= function(){
-	      var data = $.param({
-	        book: JSON.stringify({
-	            author: $scope.username,
-	            title : $scope.password
-	        })
-	      });
+	      var user = {
+	            naam: $scope.username
+	        };
 
-	      $http.post("/user/create/", data).success(function(data, status) {
+	        console.log(user);
+
+	      $http.post("/user/create/", user).success(function(user, status) {
 	        console.log('Data posted successfully');
 	      })
 	   }
-
-
 
 }]);

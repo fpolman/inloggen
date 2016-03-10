@@ -13,7 +13,8 @@
 
             // route naar inloggen
             .when('/inlogform', {
-                templateUrl : 'pages/inlogform.html'
+                templateUrl : 'pages/inlogform.html',
+                controller: 'mainController'
             })
 
             // route naar contact
