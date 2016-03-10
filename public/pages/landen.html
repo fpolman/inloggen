@@ -1,7 +1,6 @@
     <div class="jumbotron text-center">
         <h1>Landen</h1>
 
-
         <p>Voeg een land toe</p>
 
         <form>
@@ -13,10 +12,9 @@
 		</form>
 
 
-
 		<table class="table">
 		    <tr ng-repeat="land in landen">
-		        <td>{{land.landnaam}}</td><td><button class="btn" ng-click="delete(todo.id)">delete</button></td>
+		        <td>{{land.landnaam}}</td><td><button class="btn" ng-click="delete(land.id)">delete</button></td>
 		    </tr>
 		</table>
     </div>

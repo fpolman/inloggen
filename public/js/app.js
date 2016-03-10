@@ -1,6 +1,6 @@
 
     // module aanmaken met de naam travelApp
-    var travelApp = angular.module('travelApp', ['mainController', 'ngRoute']);
+    var travelApp = angular.module('travelApp', ['mainController', 'landController', 'ngRoute']);
 
 	// De routes
     travelApp.config(function($routeProvider) {
@@ -20,7 +20,7 @@
             // route naar landen
             .when('/landen', {
                 templateUrl : 'pages/landen.html',
-                controller: 'mainController'
+                controller: 'landController'
             })
 
             // route naar contact

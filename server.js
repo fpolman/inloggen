@@ -45,7 +45,6 @@ app.post('/user/create', function(req, res){
 
   var connection = getConnection();
   connection.connect();
-
   var gebruiker = {id: 0, naam: req.body.username};
 
   var query = connection.query('insert into gebruikers set ?', gebruiker, function (err, result) {
@@ -65,10 +64,9 @@ app.post('/add/land', function(req, res){
 
   var connection = getConnection();
   connection.connect();
+  var newLand = {id: 0, landnaam: req.body.land};
 
-  var landen = {id: 0, landnaam: req.body.land};
-
-  var query = connection.query('insert into landen set ?', landen, function (err, result) {
+  var query = connection.query('insert into landen set ?', newLand, function (err, result) {
       if (err) {
        console.error(err);
        return res.send(err);

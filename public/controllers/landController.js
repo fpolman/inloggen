@@ -1,9 +1,9 @@
-angular.module('mainController', [])
-    .controller('mainController', ['$scope', '$http', function($scope, $http) {
+angular.module('landController', [])
+    .controller('landController', ['$scope', '$http', function($scope, $http) {
 
 
        // het laden van de landen
-	  /*$scope.load = function ()  {
+	  $scope.load = function ()  {
 	    $http.get('/landen').
 	      success(function(data, status, headers, config) {
 	        $scope.landen = data;
@@ -27,15 +27,6 @@ angular.module('mainController', [])
 
     	console.log("addLand")
 
-	   }; */
-
-
-      // register functie, start wanneer register button geklikt is
-      $scope.register = function(){
-
-	      $http.post("/user/create/", $scope.data).success(function(status) {
-	        console.log('Data posted successfully');
-	      })
 	   };
 
 }]);
