@@ -2,6 +2,7 @@
 var express = require("express");
 var app = express();
 var bodyParser = require('body-parser');
+app.use(bodyParser.json());
 
 
 // connectie maken met de sql database
@@ -45,14 +46,11 @@ app.post('/user/create', function(req, res){
   var connection = getConnection();
   connection.connect();
 
-  var gebruikers = req.body;
-
-  console.log(gebruikers);
-  console.log(gebruikers);
+  var gebruiker = {id: 0, naam: req.body.username};
 
   console.log('request received:', req.body);
 
-  var query = connection.query('insert into gebruikers set ?', gebruikers, function (err, result) {
+  var query = connection.query('insert into gebruikers set ?', gebruiker, function (err, result) {
       if (err) {
        console.error(err);
        return res.send(err);
