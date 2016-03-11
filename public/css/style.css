@@ -49,6 +49,59 @@ table {
 /* tot hier */
 
 
+body {
+    font-family:"Open Sans";
+}
+
+p {
+    font-family: "Open Sans";
+    font-weight:300;
+    font-size:14px;
+}
+
+/* typografie */
+
+h1 {
+    font-size:45px;
+    font-weight:bold;
+    padding:10px;
+}
+
+h1.smaller {
+    font-size:30px;
+    font-weight:bold;
+    padding:10px;
+}
+
+h2 {
+    font-size:30px;
+    font-weight:bold;
+    padding:10px;
+}
+
+h3 {
+    font-size:25px;
+    font-weight:bold;
+    padding:10px;
+}
+
+.col-lg-4.populair h3 {
+    font-family: "Open Sans";
+    font-weight:300;
+}
+
+strong {
+    font-weight:bold;
+}
+
+
+/* intro titel */
+.intro-title {
+    margin-top:50px;
+    margin-bottom:50px;
+}
+
+
 /* footer */
 footer { 
 	color: #fff;
