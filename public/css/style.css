@@ -85,9 +85,10 @@ h3 {
     padding:10px;
 }
 
-.col-lg-4.populair h3 {
+.col-lg-4.topThree h3 {
     font-family: "Open Sans";
     font-weight:300;
+    padding: 30px 10px 10px;
 }
 
 strong {
