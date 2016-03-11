@@ -53,7 +53,7 @@ app.post('/add/land', function(req, res){
 
   var connection = getConnection();
   connection.connect();
-  var newLand = {id: 0, landnaam: req.body.land};
+  var newLand = {id: 0, landnaam: req.body.naam};
 
   var query = connection.query('insert into landen set ?', newLand, function (err, result) {
       if (err) {

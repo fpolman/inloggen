@@ -14,13 +14,13 @@ angular.module('landController', [])
 	      });
 	  };
 
-	  //$scope.load();
+	  $scope.load();
 
 
 	  // toevoegen landen functie, start wanneer addLand button geklikt is
       $scope.addLand = function(){
 
-	      $http.post("/add/land/", $scope.landen).success(function(status) {
+	      $http.post("/add/land/", $scope.land).success(function(status) {
 	        console.log('Data posted successfully');
 	        $scope.load();
 	      })
