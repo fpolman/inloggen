@@ -1,11 +1,12 @@
 
+// Dependencies toevoegen
 var express = require("express");
 var app = express();
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
 
-// connectie maken met de sql database
+// Connectie maken met de sql database
 var mysql = require('mysql');
 function getConnection() {
   var connection = mysql.createConnection({
@@ -18,21 +19,7 @@ function getConnection() {
   alert("connection");
 }
 
-
-// query waarmee ik database getest heb
-/* 
-connection.query('SELECT * from gebruikers', function(err, rows, fields) {
-  if (!err)
-    console.log('The solution is: ', rows);
-  else
-    console.log('Error while performing Query.');
-});
-*/
-
-// alle querys zijn uitgevoerd voordat de er een quit bericht 
-// gestuurd wordt naar mysql
-//connection.end();
-
+//Server opzetten
 app.listen(3000, function () {
   console.log('inlog functie on port 3000');
 });
@@ -40,7 +27,9 @@ app.listen(3000, function () {
 app.use(express.static('public'));
 
 
-// post user naar database
+//Functies voor communicatie database
+
+// Post user naar database
 app.post('/user/create', function(req, res){
 
   var connection = getConnection();
@@ -59,7 +48,7 @@ app.post('/user/create', function(req, res){
     connection.end();
 }); 
 
-// post land naar database
+// Post land naar database
 app.post('/add/land', function(req, res){
 
   var connection = getConnection();
@@ -79,7 +68,7 @@ app.post('/add/land', function(req, res){
 }); 
 
 
-//laden van de landenlijst
+// Load van de landenlijst
 app.get('/landen', function(req, res) {
   var connection = getConnection();
   connection.connect();

@@ -33,6 +33,8 @@ angular.module('mainController', [])
       // register functie, start wanneer register button geklikt is
       $scope.register = function(){
 
+      		console.log('registreren');
+
 	      $http.post("/user/create/", $scope.data).success(function(status) {
 	        console.log('Data posted successfully');
 	      })

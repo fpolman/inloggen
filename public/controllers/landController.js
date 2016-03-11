@@ -14,7 +14,7 @@ angular.module('landController', [])
 	      });
 	  };
 
-	  $scope.load();
+	  //$scope.load();
 
 
 	  // toevoegen landen functie, start wanneer addLand button geklikt is

@@ -20,3 +20,4 @@ function slideSwitch( jQuery ) {
 $(function () {
     setInterval("slideSwitch()", 5000);
 });
+
