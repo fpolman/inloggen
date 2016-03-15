@@ -64,25 +64,25 @@ p {
 h1 {
     font-size:45px;
     font-weight:bold;
-    padding:10px;
+    padding:10px 10px 10px 0;
 }
 
 h1.smaller {
     font-size:30px;
     font-weight:bold;
-    padding:10px;
+    padding:10px 10px 10px 0;
 }
 
 h2 {
     font-size:30px;
     font-weight:bold;
-    padding:10px;
+    padding:10px 10px 10px 0;
 }
 
 h3 {
     font-size:25px;
     font-weight:bold;
-    padding:10px;
+    padding:10px 10px 10px 0;
 }
 
 .col-lg-4.topThree h3 {
@@ -90,6 +90,7 @@ h3 {
     font-weight:300;
     padding: 30px 10px 10px;
 }
+
 
 strong {
     font-weight:bold;
@@ -100,6 +101,59 @@ strong {
 .intro-title {
     margin-top:50px;
     margin-bottom:50px;
+}
+
+/* header */
+.top-nav {
+    background-color: #044e7c;
+}
+
+.top-nav h2 {
+    color:#f1f1f1;
+    display: inline-block;
+}
+
+.img-top {
+    display:inline-block;
+    padding-right:10px;
+}
+
+.col-md-12.header {
+    height:650px;
+    background-image: url("../images/bg-image2.png");
+    background-size: cover;
+    position:relative;
+}
+
+.information {
+    position:absolute;
+    bottom:35px;
+    width:350px;
+}
+
+.information h1 {
+    color:#fff;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
+}
+
+.informationAbout {
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
+    color:#fff;
+    font-size: 20px;
+    margin-bottom:20px;
+    line-height: 24px;
+}
+
+.becomeAMember {
+    font-size: 20px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 28px;
+}
+
+.becomeAMember a {
+    color:#fff;
+    text-decoration: none;
 }
 
 
@@ -120,11 +174,12 @@ footer h3 {
 }
 
 
-/* slideshow */
+/* slideshow
 
 #slideshow {
     position:relative;
     height:400px;
+    margin-top:100px;
 }
 
 #slideshow IMG {
@@ -140,5 +195,5 @@ footer h3 {
 
 #slideshow IMG.last-active {
     z-index:9;
-}
+}*/
 
