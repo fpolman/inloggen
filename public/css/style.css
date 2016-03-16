@@ -51,12 +51,14 @@ table {
 
 body {
     font-family:"Open Sans";
+    color:#666;
 }
 
 p {
     font-family: "Open Sans";
     font-weight:300;
     font-size:14px;
+    line-height: 24px;
 }
 
 /* typografie */
@@ -65,42 +67,47 @@ h1 {
     font-size:45px;
     font-weight:bold;
     padding:10px 10px 10px 0;
+    color:#444;
 }
 
 h1.smaller {
     font-size:30px;
     font-weight:bold;
     padding:10px 10px 10px 0;
+    color:#444;
 }
 
 h2 {
     font-size:30px;
     font-weight:bold;
     padding:10px 10px 10px 0;
+    color:#444;
+}
+
+h2.thin {
+    font-size:25px;
+    font-weight:bold;
+    padding:10px 10px 10px 0;
+    font-weight:500;
+    color:#444;
 }
 
 h3 {
     font-size:25px;
     font-weight:bold;
     padding:10px 10px 10px 0;
+    color:#444;
 }
 
-.col-lg-4.topThree h3 {
+h3.thin {
     font-family: "Open Sans";
     font-weight:300;
-    padding: 30px 10px 10px;
+    color:#444;
 }
 
 
 strong {
     font-weight:bold;
-}
-
-
-/* intro titel */
-.intro-title {
-    margin-top:50px;
-    margin-bottom:50px;
 }
 
 /* header */
@@ -119,16 +126,25 @@ strong {
 }
 
 .col-md-12.header {
-    height:650px;
+    height:550px;
     background-image: url("../images/bg-image2.png");
     background-size: cover;
     position:relative;
+    margin-top:100px;
+}
+
+.col-md-12.subPage-header {
+    height:250px;
+    background-image: url("../images/bg-image2.png");
+    background-size: cover;
+    position:relative;
+    margin-top:100px;
 }
 
 .information {
     position:absolute;
     bottom:35px;
-    width:350px;
+    width:450px;
 }
 
 .information h1 {
@@ -156,15 +172,88 @@ strong {
     text-decoration: none;
 }
 
+/* infoBlocks */
+.mainTasks {
+    background-color:#f9f9f9;
+    padding-top:50px;
+    padding-bottom:50px;
+}
+
+.infoBlock h2 .fa {
+    margin-right:10px;
+}
+
+/* register & login page */
+
+.col-lg-12.login {
+    background-color:#f9f9f9;
+}
+
+.loginForm {
+    margin:0 auto;
+    padding-top:50px;
+    padding-bottom:50px;
+    width:350px;
+}
+
+.loginForm label {
+    font-size: 12px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.col-lg-12.register {
+    background-color:#f0f0f0;
+}
+
+.registerForm {
+    margin:0 auto;
+    padding-top:50px;
+    padding-bottom:50px;
+    width:350px;
+}
+
+.registerForm label {
+    font-size: 12px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.ng-pristine.ng-valid input[type="text"] {
+    border: 1px solid #bdbdbd;
+    outline: 0 none;
+    padding: 5px;
+    width:100%;
+}
+
+/* welcome page (home) */
+
+.col-lg-12.intro-title {
+    margin-top:50px;
+    margin-bottom:50px;
+}
+
+.topThree {
+    margin-bottom:50px;
+}
+
+.topTheetext {
+    padding: 30px 10px 10px;
+}
+
 
 /* footer */
+.col-lg-12.footer {
+    background-color:#033656;
+}
+
 footer { 
 	color: #fff;
-	background:#222222; 
+	background:#033656; 
 	padding:0;
 	margin:0;
 	clear: both;
-  margin-top:25px;
+    margin-top:25px;
 }
 
 footer h3 {
@@ -174,26 +263,13 @@ footer h3 {
 }
 
 
-/* slideshow
 
-#slideshow {
-    position:relative;
-    height:400px;
-    margin-top:100px;
+
+@media (max-width: 768px) {
+
+    .information {
+        width:350px;
+    }
 }
 
-#slideshow IMG {
-    position:absolute;
-    top:0;
-    left:0;
-    z-index:8;
-}
-
-#slideshow IMG.active {
-    z-index:10;
-}
-
-#slideshow IMG.last-active {
-    z-index:9;
-}*/
 
