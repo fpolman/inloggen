@@ -242,6 +242,14 @@ strong {
 }
 
 
+/* landenPage */
+.showLand {
+
+    margin-top:30px;
+    margin-bottom:30px;
+}
+
+
 /* footer */
 .col-lg-12.footer {
     background-color:#033656;

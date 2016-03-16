@@ -8,7 +8,8 @@
 
             // route naar home
             .when('/', {
-                templateUrl : 'pages/home.html'
+                templateUrl : 'pages/home.html',
+                controller: 'landController'
             })
 
             // route naar inloggen

@@ -68,8 +68,7 @@ app.post('/add/land', function(req, res){
     connection.end();
 }); 
 
-
-// Load van de landenlijst
+// Laden van de landenlijst
 app.get('/landen', function(req, res) {
   var connection = getConnection();
   connection.connect();
