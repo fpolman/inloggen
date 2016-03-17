@@ -243,10 +243,26 @@ strong {
 
 
 /* landenPage */
-.showLand {
+.ontdekken {
+    margin-top:50px;
+}
 
+.showLand {
     margin-top:30px;
     margin-bottom:30px;
+}
+
+.landInfo a {
+    color:#fff;
+    text-decoration: none;
+}
+
+.countryName h2 {
+    padding-top:0;
+}
+
+.row.showLand.ng-scope {
+    margin-bottom: 50px;
 }
 
 
