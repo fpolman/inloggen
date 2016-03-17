@@ -84,6 +84,26 @@ app.get('/landen', function(req, res) {
   connection.end();
 });
 
+// Laden van de singleLand
+app.get('/landID/:id', function(req, res) {
+  var connection = getConnection();
+  connection.connect();
+
+  var id = req.params.id;
+  console.log(id);
+
+  connection.query('SELECT * from landen WHERE id = ? ', id, function(err, rows, fields) {
+    if (!err) {
+      console.log(rows);
+      res.send(JSON.stringify(rows));
+    }
+    else {
+      console.log('Error while performing Query.');
+    }
+  });
+  connection.end();
+});
+
 
 
 

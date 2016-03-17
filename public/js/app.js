@@ -24,6 +24,12 @@
                 controller: 'landController'
             })
 
+            // route naar specifieke land pagina
+            .when('/landInfo', {
+                templateUrl : 'pages/landInfo.html',
+                controller: 'landController'
+            })
+
             // route naar contact
             .when('/contact', {
                 templateUrl : 'pages/contact.html'
