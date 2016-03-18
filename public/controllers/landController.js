@@ -1,12 +1,16 @@
 angular.module('landController', [])
-    .controller('landController', ['$scope', '$http', 'landenService', function($scope, $http) {
+    .controller('landController', ['landenService', '$scope', '$http', function( landenService, $scope, $http ) {
 
 
-       // het laden van de landen
+      // het laden van de landen
 	  $scope.load = function ()  {
-
-	  	return landenService.landen();
-	   
+	  	landenService.getLanden().success(function (data) {
+        	$scope.landen = data;
+      	}).
+      	error(function(data, status, headers, config) {
+	      console.log(status);
+	      console.log(data);
+	    });	   
 
 	   /* $http.get('/landen').
 	      success(function(data, status, headers, config) {
@@ -18,7 +22,25 @@ angular.module('landController', [])
 	      }); */
 	  };
 
+
 	  $scope.load();
+
+	  //inladen gegevens van 1 land
+	   $scope.singleLand = function(id) {
+
+	   	console.log(id);
+
+	   	landenService.getLand(id).success(function (data) {
+	   		$scope.land = data;
+
+	   		console.log(data);
+
+	   	}).
+	   	error(function(data, status, headers, config) {
+	      console.log(status);
+	      console.log(data);
+	    });
+	  };
 
 
 	  // toevoegen landen functie, start wanneer addLand button geklikt is

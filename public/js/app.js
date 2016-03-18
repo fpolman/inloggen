@@ -1,6 +1,7 @@
 
     // module aanmaken met de naam travelApp
-    var travelApp = angular.module('travelApp', ['mainController', 'landController', 'singleLandController', 'ngRoute']);
+    var travelApp = angular.module('travelApp', 
+    ['mainController', 'landController', 'singleLandController', 'landenService', 'ngRoute']);
 
 	// De routes
     travelApp.config(function($routeProvider) {

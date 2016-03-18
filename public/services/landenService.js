@@ -1,20 +1,25 @@
 
 
     angular.module('landenService', [])
-    .service('landenService', ['$scope', '$http', function($scope, $http) {
+    .factory('landenService', ['$http', function( $http ) { 
+
+        
         return {
-            landen:function () {
+          getLanden: function () {
+            return $http.get('/landen');
+          },
+          getLand: function (id) {
 
-            	$http.get('/landen').
-			      success(function(data, status, headers, config) {
-			        $scope.landen = data;
-			      }).
-			      error(function(data, status, headers, config) {
-			      console.log(status);
-			      console.log(data);
-			      });
+            console.log(id);
+            return $http.get('/landID/' + id);
 
-
-            }
-        };
+          },
+          create: function (newLand) {
+            console.log('create');
+          },
+          delete: function (id) {
+            console.log('delete');
+          }
+        }
+        
     }]);
