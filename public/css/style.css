@@ -219,7 +219,14 @@ strong {
     width: 100%;
 }
 
-.ng-pristine.ng-valid input[type="text"] {
+input[type="text"] {
+    border: 1px solid #bdbdbd;
+    outline: 0 none;
+    padding: 5px;
+    width:100%;
+}
+
+input[type="password"] {
     border: 1px solid #bdbdbd;
     outline: 0 none;
     padding: 5px;
@@ -245,6 +252,10 @@ strong {
 /* landenPage */
 .ontdekken {
     margin-top:50px;
+}
+
+.landen {
+    margin-bottom:50px;
 }
 
 .showLand {

@@ -14,23 +14,8 @@
             return $http.get('/landen');
         },
         getID: function () {
-
-            /*
-            return $http.get('/landID/' + id).then(function(response) {
-
-            LandNaam = response.data;
-
-            console.log(LandNaam);
-
-            return LandNaam;
-
-            */
-     
-
             console.log("get " + data.landID);
-
             return data.landID;
-
         },
 
         setID: function (landid) {
