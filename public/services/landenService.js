@@ -1,25 +1,63 @@
 
 
     angular.module('landenService', [])
-    .factory('landenService', ['$http', function( $http ) { 
+    .factory('landenService', ['$http', function( $http ) {
 
-        
-        return {
-          getLanden: function () {
+    var data = {
+        landID: ''
+    };
+
+
+    return { 
+
+        getLanden: function () {
             return $http.get('/landen');
-          },
-          getLand: function (id) {
+        },
+        getID: function () {
 
-            console.log(id);
-            return $http.get('/landID/' + id);
+            /*
+            return $http.get('/landID/' + id).then(function(response) {
 
-          },
-          create: function (newLand) {
+            LandNaam = response.data;
+
+            console.log(LandNaam);
+
+            return LandNaam;
+
+            */
+     
+
+            console.log("get " + data.landID);
+
+            return data.landID;
+
+        },
+
+        setID: function (landid) {
+
+            data.landID = landid;
+
+            console.log('set' + landid);
+
+        },
+
+        getLand: function (newValue) {
+
+
+            console.log(newValue);
+
+            return $http.get('/landID/' + newValue);
+
+
+        },
+
+
+        create: function (newLand) {
             console.log('create');
-          },
-          delete: function (id) {
+        },
+        delete: function (id) {
             console.log('delete');
-          }
         }
+    }
         
-    }]);
+}]);

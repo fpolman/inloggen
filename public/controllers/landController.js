@@ -1,7 +1,6 @@
 angular.module('landController', [])
     .controller('landController', ['landenService', '$scope', '$http', function( landenService, $scope, $http ) {
 
-
       // het laden van de landen
 	  $scope.load = function ()  {
 	  	landenService.getLanden().success(function (data) {
@@ -22,24 +21,27 @@ angular.module('landController', [])
 	      }); */
 	  };
 
-
 	  $scope.load();
+
 
 	  //inladen gegevens van 1 land
 	   $scope.singleLand = function(id) {
 
-	   	console.log(id);
+	   landenService.setID(id);
+
+	   //$scope.land = land;
+
+	   /*	
 
 	   	landenService.getLand(id).success(function (data) {
 	   		$scope.land = data;
-
-	   		console.log(data);
 
 	   	}).
 	   	error(function(data, status, headers, config) {
 	      console.log(status);
 	      console.log(data);
-	    });
+	    }); */
+
 	  };
 
 

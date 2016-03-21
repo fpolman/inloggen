@@ -1,23 +1,41 @@
 angular.module('singleLandController', [])
-    .controller('singleLandController', ['$scope', '$http', function($scope, $http) {
+    .controller('singleLandController', ['landenService', '$scope', '$http', '$routeParams', function(landenService, $scope, $http, $routeParams) {
 
 
-    	/*
-    	//inladen gegevens van 1 land
-	   $scope.singleLand = function (id) {
+    	//$scope.aantal = 0;
 
-	   	console.log(id);
 
-	   	landenService.getLand().succes(function (data) {
-	   		$scope.land = data;
-	   	}).
-	   	error(function(data, status, headers, config) {
+ 	$scope.$watch(function () { return landenService.getID(); }, function (newValue, oldValue) {
+
+ 		//$scope.aantal = 1;
+
+ 		//if( $scope.aantal === 1 ) {
+
+        $scope.deID = newValue;
+
+
+
+
+        landenService.getLand(newValue).success(function (data) {
+        	$scope.land = data[0];
+
+        	//$scope.land = 'hallo';
+
+        	console.log(data);
+
+      	}).
+      	error(function(data, status, headers, config) {
 	      console.log(status);
 	      console.log(data);
-	    });
-	  };
+	    });	
 
-	  */
+
+	 //};   
+
+
+
+    });
+
 
 }]);
 
