@@ -104,6 +104,22 @@ app.get('/landID/:id', function(req, res) {
   connection.end();
 });
 
+// Laden van de user
+app.get('/user', function(req, res) {
+  var connection = getConnection();
+  connection.connect();
+  connection.query('SELECT * from gebruikers WHERE id = 1', function(err, rows, fields) {
+    if (!err) {
+      console.log(rows);
+      res.send(JSON.stringify(rows));
+    }
+    else {
+      console.log('Error while performing Query.');
+    }
+  });
+  connection.end();
+});
+
 
 
 

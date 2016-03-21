@@ -5,6 +5,9 @@ angular.module('userController', [])
 	  $scope.loadUser = function ()  {
 	  	landenService.getUser().success(function (data) {
         	$scope.user = data[0];
+
+        	console.log(data);
+
       	}).
       	error(function(data, status, headers, config) {
 	      console.log(status);
