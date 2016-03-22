@@ -108,7 +108,7 @@ app.get('/landID/:id', function(req, res) {
 app.get('/user', function(req, res) {
   var connection = getConnection();
   connection.connect();
-  connection.query('SELECT * from gebruikers WHERE id = 1', function(err, rows, fields) {
+  connection.query('SELECT * from gebruikers WHERE idgebruiker = 1', function(err, rows, fields) {
     if (!err) {
       console.log(rows);
       res.send(JSON.stringify(rows));

@@ -4,17 +4,19 @@
     	<div class="container-fluid">    
       		<div class="row"> 
           		<div class="container">
-          			<div class="col-lg-6 ontdekken">
-        				<h2 class="thin">Informatie over {{land.landnaam}}</h2>
-        				<img src="{{land.imgurl}}" />
-        				<p>{{land.omschrijving}}</p>
+          			<div class="col-lg-6 landMainInfo">
+          				<div class="landTitle">
+        					<h2 class="thin">Informatie over {{land.landnaam}}</h2>
+        				</div>
+        				<div class="landImg">
+        					<img src="{{land.imgurl}}" />
+        				</div>
+        				<div class="landInfo">
+        					<p>{{land.omschrijving}}</p>
+        				</div>
         			</div>	
-        			<div class="col-lg-6 ontdekken">
-
-	          			<img src="{{land.imgurl}}" />
-
-	        			<h2 class="thin">Informatie over {{land.landnaam}}</h2>
-	        			<p>{{land.omschrijving}}</p>
+        			<div class="col-lg-6 landSpecInfo">
+        				<h2 class="thin">Overige info</h2>
         			</div>
         		</div>	
         	</div>

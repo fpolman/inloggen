@@ -15,7 +15,6 @@ angular.module('singleLandController', [])
 
 
 
-
         landenService.getLand(newValue).success(function (data) {
         	$scope.land = data[0];
 
