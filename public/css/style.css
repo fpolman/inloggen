@@ -305,6 +305,11 @@ footer h3 {
     .information {
         width:350px;
     }
+
+    .land-img {
+        text-align:center;
+        margin-bottom:20px;
+    }
 }
 
 

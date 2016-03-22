@@ -3,13 +3,20 @@
 
     	<div class="container-fluid">    
       		<div class="row"> 
-          		<div class="col-lg-12 ontdekken">
-          			<div class="container">
+          		<div class="container">
+          			<div class="col-lg-6 ontdekken">
         				<h2 class="thin">Informatie over {{land.landnaam}}</h2>
-        				<p>{{land.omschrijving}}</p>
         				<img src="{{land.imgurl}}" />
+        				<p>{{land.omschrijving}}</p>
         			</div>	
-        		</div>
+        			<div class="col-lg-6 ontdekken">
+
+	          			<img src="{{land.imgurl}}" />
+
+	        			<h2 class="thin">Informatie over {{land.landnaam}}</h2>
+	        			<p>{{land.omschrijving}}</p>
+        			</div>
+        		</div>	
         	</div>
         </div>		
 
