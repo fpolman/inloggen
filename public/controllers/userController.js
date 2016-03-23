@@ -26,6 +26,9 @@ angular.module('userController', [])
 	      $http.post("/user/update/", $scope.user).success(function(status) {
 	        console.log('Data posted successfully');
 	      })
+
+	      $scope.loadUser();
+
 	   };
 
 
@@ -45,6 +48,27 @@ angular.module('userController', [])
 
 	  };
 	  $scope.loadVisitedCountries();
+
+
+	  // register functie, start wanneer register button geklikt is
+      $scope.addVisitedCountry = function(){
+
+      		console.log('addaddVisitedCountry');
+
+	      $http.post("/addVisitedCountry/", $scope.data).success(function(status) {
+	        console.log('Data posted successfully');
+	      })
+
+	      $scope.loadVisitedCountries();
+
+	   };
+
+
+	   $scope.deleteVisitedCountry = function (id)  {
+	    $http.delete("/visitedCountry/" + id).success(function () {
+	    	$scope.loadVisitedCountries();
+	    });
+	  };
 
 
 

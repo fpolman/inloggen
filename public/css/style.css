@@ -100,6 +100,7 @@ h3 {
 }
 
 h3.thin {
+    font-size:17px;
     font-family: "Open Sans";
     font-weight:300;
     color:#444;
@@ -228,6 +229,16 @@ input[type="text"] {
     outline: 0 none;
     padding: 5px;
     width:100%;
+    font-size: 12px;
+}
+
+textarea {
+    border: 1px solid #bdbdbd;
+    outline: 0 none;
+    padding: 5px;
+    width:100%;
+    resize: none;
+    font-size: 12px;
 }
 
 input[type="password"] {
@@ -235,6 +246,7 @@ input[type="password"] {
     outline: 0 none;
     padding: 5px;
     width:100%;
+    font-size: 12px;
 }
 
 /* welcome page (home) */
@@ -293,6 +305,27 @@ input[type="password"] {
     border-radius: 10px;
 }
 
+.landSpecInfo {
+    margin-top:50px;
+}
+
+.landActiveiten {
+    margin-top:20px;
+}
+
+.landActiveitImg {
+    display:inline-block;
+}
+
+.landActiviteiten span {
+    vertical-align: text-top;
+}
+
+.landActiveiten h3 {
+    display:inline-block;
+    padding-top:0;
+}
+
 .landTitle {
 
 }
@@ -325,7 +358,6 @@ input[type="password"] {
 .myCountries {
     background-color:#f9f9f9;
     margin-top:50px;
-    margin-bottom:50px;
     padding:30px;
     text-align:center;
     border:1px solid #f9f9f9;
@@ -334,6 +366,20 @@ input[type="password"] {
 
 .myCountries img {
     margin-bottom:15px;
+}
+
+.addMyCountries {
+    background-color:#f9f9f9;
+    margin-top:50px;
+    margin-bottom:50px;
+    padding:30px;
+    text-align:center;
+    border:1px solid #f9f9f9;
+    border-radius: 10px;
+}
+
+.delButton {
+    text-align: right;
 }
 
 

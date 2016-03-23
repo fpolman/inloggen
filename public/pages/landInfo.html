@@ -4,20 +4,28 @@
     	<div class="container-fluid">    
       		<div class="row"> 
           		<div class="container">
-          			<div class="col-lg-6 landMainInfo">
-          				<div class="landTitle">
-        					<h2 class="thin">Informatie over {{land.landnaam}}</h2>
-        				</div>
-        				<div class="landImg">
-        					<img src="{{land.imgurl}}" />
-        				</div>
-        				<div class="landInfo">
-        					<p>{{land.omschrijving}}</p>
-        				</div>
-        			</div>	
-        			<div class="col-lg-6 landSpecInfo">
-        				<h2 class="thin">Overige info</h2>
-        			</div>
+          			<div class="col-lg-12">
+	          			<div class="col-lg-6 landMainInfo">
+	          				<div class="landTitle">
+	        					<h2 class="thin">Informatie over {{land.landnaam}}</h2>
+	        				</div>
+	        				<div class="landImg">
+	        					<img src="{{land.imgurl}}" />
+	        				</div>
+	        				<div class="landInfo">
+	        					<h2 class="thin">Algemene informatie</h2>
+	        					<p>{{land.omschrijving}}</p>
+	        				</div>
+	        			</div>
+	        			<div class="col-lg-6 landSpecInfo">
+	        				<h2 class="thin">Activiteiten</h2>
+	        				<div class="landActiveiten" ng-repeat="activiteit in activiteiten">
+	        					<span class="landActiveitImg"><img src="{{activiteit.activiteitenImg}}" /></span>
+	        					<h3 class="thin">{{activiteit.activiteitenNaam}}</h3>
+	        					<p>{{activiteit.omschrijving}}</p>
+	        				</div>
+	        			</div>
+	        		</div>	
         		</div>	
         	</div>
         </div>		

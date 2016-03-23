@@ -21,6 +21,21 @@ angular.module('singleLandController', [])
 	      console.log(status);
 	      console.log(data);
 	    });	
+
+
+
+      	landenService.getActivity(newValue).success(function (data) {
+        	$scope.activiteiten = data;
+        	console.log(data);
+
+      	}).
+      	error(function(data, status, headers, config) {
+	      console.log(status);
+	      console.log(data);
+	    });	
+
+
+
     });
 
 
