@@ -8,11 +8,11 @@
 			        <h3 class="thin">Login via je bestaande account</h3>
 			        <form id="inlogForm">
 					  <div class="form-group">
-					    <label for="username">Username</label>
+					    <label for="username">Gebruikersnaam</label>
 					    <input type="text" ng-model="login.username">
 					  </div>
 					  <div class="form-group">
-					    <label for="password">Password</label>
+					    <label for="password">Wachtwoord</label>
 					    <input type="password" ng-model="login.password">
 					  </div>
 					  <a href="#ingelogd" type="submit" class="btn btn-default" ng-click="login()">Inloggen</a>
@@ -31,12 +31,24 @@
 			        <form id="registrationForm">
 			          <h3 class="thin">Of maak een nieuw account</h3>
 					  <div class="form-group">
-					    <label for="username">Username</label>
-					    <input type="text" ng-model="data.username">
+					    <label for="gebruikersnaam">Gebruikersnaam</label>
+					    <input type="text" ng-model="data.gebruikersnaam">
 					  </div>
 					  <div class="form-group">
-					    <label for="password">Password</label>
-					    <input type="password" ng-model="data.password">
+					    <label for="voornaam">Voornaam</label>
+					    <input type="text" ng-model="data.voornaam">
+					  </div>
+					  <div class="form-group">
+					    <label for="achternaam">Achternaam</label>
+					    <input type="text" ng-model="data.achternaam">
+					  </div>
+					  <div class="form-group">
+					    <label for="geboortedatum">Geboortedatum</label>
+					    <input type="text" ng-model="data.geboortedatum">
+					  </div>
+					  <div class="form-group">
+					    <label for="wachtwoord">Wachtwoord</label>
+					    <input type="password" ng-model="data.wachtwoord">
 					  </div>
 					  <button type="submit" class="btn btn-default" ng-click="register()">Registreren</button>
 					</form>

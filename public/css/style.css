@@ -105,6 +105,10 @@ h3.thin {
     color:#444;
 }
 
+label {
+    font-size:12px;
+    padding-bottom:5px;
+}
 
 strong {
     font-weight:bold;
@@ -300,6 +304,36 @@ input[type="password"] {
 
 .landInfo {
 
+}
+
+
+/* user profile page */
+.user-info {
+    padding-top:50px;
+    padding-bottom:50px;
+    background-color:#f9f9f9;
+}
+
+.travel-img {
+    text-align:center;
+}
+
+.countryOverview {
+    margin-top:50px;
+}
+
+.myCountries {
+    background-color:#f9f9f9;
+    margin-top:50px;
+    margin-bottom:50px;
+    padding:30px;
+    text-align:center;
+    border:1px solid #f9f9f9;
+    border-radius: 10px;
+}
+
+.myCountries img {
+    margin-bottom:15px;
 }
 
 

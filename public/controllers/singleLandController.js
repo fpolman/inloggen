@@ -7,13 +7,7 @@ angular.module('singleLandController', [])
 
  	$scope.$watch(function () { return landenService.getID(); }, function (newValue, oldValue) {
 
- 		//$scope.aantal = 1;
-
- 		//if( $scope.aantal === 1 ) {
-
         $scope.deID = newValue;
-
-
 
         landenService.getLand(newValue).success(function (data) {
         	$scope.land = data[0];
@@ -27,12 +21,6 @@ angular.module('singleLandController', [])
 	      console.log(status);
 	      console.log(data);
 	    });	
-
-
-	 //};   
-
-
-
     });
 
 

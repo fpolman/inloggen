@@ -35,9 +35,42 @@ app.post('/user/create', function(req, res){
 
   var connection = getConnection();
   connection.connect();
-  var gebruiker = {id: 0, naam: req.body.username};
+  var gebruiker = {
+    idgebruiker: 0, 
+    gebruikersnaam: req.body.gebruikersnaam,
+    voornaam: req.body.voornaam,
+    achternaam: req.body.achternaam,
+    geboortedatum: req.body.geboortedatum
+  };
 
   var query = connection.query('insert into gebruikers set ?', gebruiker, function (err, result) {
+      if (err) {
+       console.error(err);
+       return res.send(err);
+     } else {
+       return res.send('Ok');
+     }
+
+    });
+    connection.end();
+}); 
+
+// update user naar database
+app.post('/user/update', function(req, res){
+
+  var connection = getConnection();
+  connection.connect();
+
+  var gebruiker = {
+    gebruikersnaam: req.body.gebruikersnaam,
+    voornaam: req.body.voornaam,
+    achternaam: req.body.achternaam,
+    geboortedatum: req.body.geboortedatum
+  };
+
+  console.log(gebruiker);
+
+  var query = connection.query('update gebruikers set ? WHERE idgebruiker = 1', gebruiker, function (err, result) {
       if (err) {
        console.error(err);
        return res.send(err);
@@ -109,6 +142,23 @@ app.get('/user', function(req, res) {
   var connection = getConnection();
   connection.connect();
   connection.query('SELECT * from gebruikers WHERE idgebruiker = 1', function(err, rows, fields) {
+    if (!err) {
+      console.log(rows);
+      res.send(JSON.stringify(rows));
+    }
+    else {
+      console.log('Error while performing Query.');
+    }
+  });
+  connection.end();
+});
+
+
+//laden van visitedCountries van de user
+app.get('/visitedCountries', function(req, res) {
+  var connection = getConnection();
+  connection.connect();
+  connection.query('SELECT * from gebruikerslanden WHERE idgebruiker = 1', function(err, rows, fields) {
     if (!err) {
       console.log(rows);
       res.send(JSON.stringify(rows));

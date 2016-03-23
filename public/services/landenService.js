@@ -25,6 +25,9 @@
             console.log(newValue);
             return $http.get('/landID/' + newValue);
         },
+        getVisitedCountries: function () {
+            return $http.get('/visitedCountries');
+        },
         getUser: function () {
             return $http.get('/user');
         },
