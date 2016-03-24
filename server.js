@@ -227,5 +227,26 @@ app.delete('/visitedCountry/:id', function(req, res) {
 });
 
 
+// Laden van de singleLand
+app.get('/recenties/:id', function(req, res) {
+  var connection = getConnection();
+  connection.connect();
+
+  var id = req.params.id;
+  console.log(id);
+
+  connection.query('SELECT * from recenties WHERE landenid = ? ', id, function(err, rows, fields) {
+    if (!err) {
+      console.log(rows);
+      res.send(JSON.stringify(rows));
+    }
+    else {
+      console.log('Error while performing Query.');
+    }
+  });
+  connection.end();
+});
+
+
 
 

@@ -27,7 +27,6 @@ angular.module('singleLandController', [])
       	landenService.getActivity(newValue).success(function (data) {
         	$scope.activiteiten = data;
         	console.log(data);
-
       	}).
       	error(function(data, status, headers, config) {
 	      console.log(status);
@@ -35,9 +34,16 @@ angular.module('singleLandController', [])
 	    });	
 
 
+	    landenService.getRecenties(newValue).success(function (data) {
+        	$scope.recenties = data;
+        	console.log(data);
+      	}).
+      	error(function(data, status, headers, config) {
+	      console.log(status);
+	      console.log(data);
+	    });	
 
     });
-
 
 }]);
 

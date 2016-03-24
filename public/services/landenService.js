@@ -28,6 +28,9 @@
         getActivity: function (newValue) {
             return $http.get('/activities/' + newValue);
         },
+        getRecenties: function (newValue) {
+            return $http.get('/recenties/' + newValue);
+        },
         getVisitedCountries: function () {
             return $http.get('/visitedCountries');
         },

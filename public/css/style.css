@@ -335,8 +335,17 @@ input[type="password"] {
     margin-bottom:20px;
 }
 
-.landInfo {
+.gebruikersReacties {
+    background-color:#f9f9f9;
+    padding-top:50px;
+}
 
+.addActivity {
+    margin-bottom:50px;
+}
+
+hr.grey {
+    border-color:#e9e9e9;
 }
 
 

@@ -53,13 +53,19 @@ angular.module('userController', [])
 	  // register functie, start wanneer register button geklikt is
       $scope.addVisitedCountry = function(){
 
-      		console.log('addaddVisitedCountry');
+      	if ( $scope.data != null ) {
 
-	      $http.post("/addVisitedCountry/", $scope.data).success(function(status) {
-	        console.log('Data posted successfully');
-	      })
+      		  console.log('addaddVisitedCountry');
+
+		      $http.post("/addVisitedCountry/", $scope.data).success(function(status) {
+		        console.log('Data posted successfully');
+		      })
 
 	      $scope.loadVisitedCountries();
+
+	  	} else {
+	  		console.log('ik ben leeg');
+	  	}
 
 	   };
 
