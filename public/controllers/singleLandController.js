@@ -35,6 +35,9 @@ angular.module('singleLandController', [])
 
 
 	    landenService.getRecenties(newValue).success(function (data) {
+
+	    	console.log('testje');
+
         	$scope.recenties = data;
         	console.log(data);
       	}).
@@ -43,7 +46,42 @@ angular.module('singleLandController', [])
 	      console.log(data);
 	    });	
 
+
+
+      	//actviteit toevoegen
+	    $scope.submit = function(){
+
+      		console.log('submit');
+
+      		$http.post("/recentie/", $scope.data).success(function(status) {
+	        	console.log('Data posted successfully');
+	     	})
+
+
+	     	landenService.getRecenties()
+
+	    };
+
     });
+
+
+	// het laden van de landen
+	  $scope.loadRecenties = function ()  {
+
+
+	  	console.log('loadRecenties');
+
+
+	  	landenService.getRecenties().success(function (data) {
+        	$scope.recentie = data;
+      	}).
+      	error(function(data, status, headers, config) {
+	      console.log(status);
+	      console.log(data);
+	    });	   
+
+	  };
+
 
 }]);
 

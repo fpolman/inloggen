@@ -41,11 +41,11 @@
 		          		</div>	
 	        		</div>	
 
-	        		<!--
+	        		
 	        		<div class="col-lg-12">
 						<div class="addActivity">
 							<h2 class="thin">Ook een activiteit toevoegen?</h2>
-							<form id="activityForm">
+							<form ng-submit="submit()" id="activityForm">
 							  <div class="form-group">
 							    <label for="gebruikersnaam">Gebruikersnaam</label>
 							    <input type="text" ng-model="data.gebruikersnaam">
@@ -58,12 +58,12 @@
 							    <label for="activityInfo">Informatie</label>
 							    <textarea name="text-area" rows="8" ng-model="data.omschrijving"></textarea>
 							  </div>
-							  <button type="submit" class="btn btn-primary" ng-click="addActivity()">Activiteit toevoegen</button>
+							  <button type="submit" id="submit" class="btn btn-primary" ng-click="">Activiteit toevoegen</button>
 							</form>
 						</div>	
 					</div>
 
-					-->
+				
         		</div>	
         	</div>
         </div>	

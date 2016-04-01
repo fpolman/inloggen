@@ -10,6 +10,9 @@
 
     return { 
 
+        getTopLanden: function () {
+            return $http.get('/Toplanden');
+        },
         getLanden: function () {
             return $http.get('/landen');
         },
@@ -28,8 +31,8 @@
         getActivity: function (newValue) {
             return $http.get('/activities/' + newValue);
         },
-        getRecenties: function (newValue) {
-            return $http.get('/recenties/' + newValue);
+        getRecenties: function () {
+            return $http.get('/recenties/');
         },
         getVisitedCountries: function () {
             return $http.get('/visitedCountries');

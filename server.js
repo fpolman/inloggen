@@ -102,6 +102,22 @@ app.post('/add/land', function(req, res){
 }); 
 
 // Laden van de landenlijst
+app.get('/Toplanden', function(req, res) {
+  var connection = getConnection();
+  connection.connect();
+  connection.query('SELECT * from topLanden', function(err, rows, fields) {
+    if (!err) {
+      //console.log(rows);
+      res.send(JSON.stringify(rows));
+    }
+    else {
+      console.log('Error while performing Query.');
+    }
+  });
+  connection.end();
+});
+
+// Laden van de landenlijst
 app.get('/landen', function(req, res) {
   var connection = getConnection();
   connection.connect();
@@ -238,6 +254,47 @@ app.get('/recenties/:id', function(req, res) {
   connection.query('SELECT * from recenties WHERE landenid = ? ', id, function(err, rows, fields) {
     if (!err) {
       console.log(rows);
+      res.send(JSON.stringify(rows));
+    }
+    else {
+      console.log('Error while performing Query.');
+    }
+  });
+  connection.end();
+});
+
+// Post recentie naar database
+app.post('/recentie', function(req, res){
+
+  var connection = getConnection();
+  connection.connect();
+  var recentie = {
+    landenid: 1,
+    idgebruiker: 1,
+    gebruikersnaam: req.body.gebruikersnaam,
+    naamActiviteit: req.body.activiteitenNaam,
+    omschrijving: req.body.omschrijving
+  };
+
+  var query = connection.query('insert into recenties set ?', recentie, function (err, result) {
+      if (err) {
+       console.error(err);
+       return res.send(err);
+     } else {
+       return res.send('Ok');
+     }
+
+    });
+    connection.end();
+}); 
+
+// Laden van de recenties
+app.get('/recenties', function(req, res) {
+  var connection = getConnection();
+  connection.connect();
+  connection.query('SELECT * from recenties', function(err, rows, fields) {
+    if (!err) {
+      //console.log(rows);
       res.send(JSON.stringify(rows));
     }
     else {

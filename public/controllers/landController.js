@@ -24,6 +24,29 @@ angular.module('landController', [])
 	  $scope.load();
 
 
+	  // het laden van de landen
+	  $scope.loadToplanden = function ()  {
+	  	landenService.getTopLanden().success(function (data) {
+        	$scope.topLanden = data;
+      	}).
+      	error(function(data, status, headers, config) {
+	      console.log(status);
+	      console.log(data);
+	    });	   
+
+	   /* $http.get('/landen').
+	      success(function(data, status, headers, config) {
+	        $scope.landen = data;
+	      }).
+	      error(function(data, status, headers, config) {
+	      console.log(status);
+	      console.log(data);
+	      }); */
+	  };
+
+	  $scope.loadToplanden();
+
+
 	  //inladen gegevens van 1 land
 	   $scope.singleLand = function(id) {
 
